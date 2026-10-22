@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmDirect - Farmer Marketplace</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f8f0;
+            color: #263b29;
+        }
+
+        header {
+            background: #287a3d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: #1e5c30;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 12px;
+            text-decoration: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #cccccc;
+        }
+
+        .price {
+            color: #287a3d;
+            font-weight: bold;
+        }
+
+        button {
+            background: #287a3d;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #message {
+            text-align: center;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        footer {
+            background: #1e5c30;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🌱 FarmDirect</h1>
+        <p>From Farmers Directly to Consumers</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Support Farmers. Get Fresh Produce.</h2>
+        <p>Buy fresh farm products while helping farmers earn more.</p>
+    </section>
+
+    <section id="products">
+        <h2 style="text-align:center;">Available Farm Products</h2>
+
+        <div class="products">
+            <div class="card">
+                <h3>🍅 Tomatoes</h3>
+                <p>Fresh farm tomatoes</p>
+                <p class="price">₹30 / kg</p>
+                <button onclick="orderProduct('Tomatoes')">Order</button>
+            </div>
+
+            <div class="card">
+                <h3>🥔 Potatoes</h3>
+                <p>Quality farm potatoes</p>
+                <p class="price">₹25 / kg</p>
+                <button onclick="orderProduct('Potatoes')">Order</button>
+            </div>
+
+            <div class="card">
+                <h3>🥕 Carrots</h3>
+                <p>Fresh carrots from farms</p>
+                <p class="price">₹40 / kg</p>
+                <button onclick="orderProduct('Carrots')">Order</button>
+            </div>
+        </div>
+
+        <p id="message"></p>
+    </section>
+
+    <section class="hero" id="about">
+        <h2>Why FarmDirect?</h2>
+        <p>Our idea is to connect farmers and buyers directly, reduce
+        unnecessary intermediaries, and improve price transparency.</p>
+        <p>Logistics support can help products reach customers efficiently.</p>
+    </section>
+
+    <footer>
+        <p>FarmDirect | Smart India Hackathon Project Concept</p>
+    </footer>
+
+    <script>
+        function orderProduct(product) {
+            document.getElementById("message").textContent =
+                "You selected " + product +
+                ". This is a demo; online ordering is not connected yet.";
+        }
+    </script>
+</body>
+</html>
